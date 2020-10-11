@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Z.Expressions;
 
-namespace kalkulacka_snad
+namespace kalkulacka5
 {
     public partial class MainPage : ContentPage
     {
@@ -22,7 +22,7 @@ namespace kalkulacka_snad
             string result = "";
             try
             {
-                var outcome = Eval.Execute<int>(expression, 1, 2);
+                var outcome = Eval.Execute<int>(expression);
 
                 result = outcome.ToString();
 
@@ -62,7 +62,7 @@ namespace kalkulacka_snad
             {
                 LabelCal.Text = "";
             }
-            if (buttonText != "=" || buttonText != "DEL" || buttonText != "C")
+            if (buttonText != "=" && buttonText != "DEL" && buttonText != "C")
             {
                 if (LabelCal.Text == "ERROR")
                 {
